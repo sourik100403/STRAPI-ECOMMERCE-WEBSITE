@@ -1,0 +1,112 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 71,
+      "minLength": 3
+    },
+    "slug": {
+      "type": "uid",
+      "required": true,
+      "minLength": 3,
+      "maxLength": 110
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "size": {
+      "type": "string",
+      "required": false,
+      "maxLength": 70
+    },
+    "color": {
+      "type": "enumeration",
+      "enum": [
+        "red",
+        "blue",
+        "green",
+        "yellow",
+        "grey",
+        "black",
+        "white",
+        "purple",
+        "silver",
+        "maroon",
+        "fuchsia",
+        "bisque",
+        "beige",
+        "azure",
+        "darkred",
+        "gainsboro",
+        "tomato",
+        "thistle"
+      ],
+      "required": true
+    },
+    "price": {
+      "type": "integer",
+      "required": true
+    },
+    "availableQty": {
+      "type": "integer",
+      "required": true
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "mobiles",
+        "fashion",
+        "electronics",
+        "home",
+        "personalcare",
+        "toys",
+        "furniture",
+        "sports",
+        "medicines"
+      ]
+    },
+    "ratings": {
+      "type": "decimal",
+      "required": true,
+      "max": 5,
+      "min": 0
+    },
+    "types": {
+      "type": "string",
+      "required": true,
+      "maxLength": 25,
+      "minLength": 2
+    },
+    "brand": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "string",
+      "required": true,
+      "maxLength": 95,
+      "minLength": 5
+    }
+  }
+}
